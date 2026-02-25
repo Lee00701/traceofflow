@@ -1389,3 +1389,18 @@ header h1{
   background-size: contain;
   background-repeat: no-repeat;
 }
+/* ===== 放大 logo + 靠左 ===== */
+header h1{
+  width: 200px;          /* ← 放大 (原本160左右) */
+  height: 70px;          /* 不要超過 header 高度 */
+  margin: 0;
+
+  background-size: contain;
+  background-position: left center; /* 靠左對齊 */
+  background-repeat: no-repeat;
+}
+
+/* header 內距調整，讓 logo 更貼左 */
+header{
+  padding-left: 16px !important;  /* 原本可能太大 */
+}
