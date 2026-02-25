@@ -1240,3 +1240,29 @@ html, body {
 html {
   background: #1C2454;
 }
+/* ✅ 桌機才套用：讓主視覺真正滿版、且不偏移 */
+@media (min-width: 1024px) {
+  .full-bleed,
+  .hero,
+  .kv,
+  .banner,
+  .figure_1 {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+    /* ❌ 不要再用 left/right:50% 那套 */
+    left: auto;
+    right: auto;
+  }
+
+  /* 圖片本身撐滿 */
+  .hero img,
+  .kv img,
+  .banner img,
+  .figure_1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
