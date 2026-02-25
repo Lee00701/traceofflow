@@ -1517,3 +1517,32 @@ header h1{
   }
 }
 padding-left: 6px !important;
+/* =========================
+   HEADER 視覺優化（強制覆蓋）
+   ========================= */
+
+header{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  height: 80px !important;
+  padding: 0 32px !important;   /* 左右更舒服 */
+}
+
+/* 放大 + 比例更好看 */
+header h1{
+  width: 180px !important;   /* 原本太小 */
+  height: 56px !important;
+  margin: 0 !important;
+
+  background-size: contain !important;
+  background-position: left center !important;
+  background-repeat: no-repeat !important;
+
+  text-indent: -9999px;
+}
+
+/* 右邊選單微調 */
+.nav{
+  gap: 32px !important;
+}
