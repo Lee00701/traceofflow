@@ -1381,3 +1381,11 @@ main{
 
 /* 5) 全域防止水平捲軸 */
 html, body { overflow-x: hidden; }
+header h1{
+  width: 160px;          /* ←縮小：可改 140~180 */
+  height: 56px;          /* ←縮小：建議 48~64 */
+  margin: 0;
+  background-position: left center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
