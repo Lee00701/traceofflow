@@ -1266,3 +1266,28 @@ html {
     display: block;
   }
 }
+/* ===== 桌機 header：背景滿版，但內容置中在 1200px 版心 ===== */
+header{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 80px;
+  background: #1C2454;
+  z-index: 10;
+
+  /* 讓 header 裡的 h1 + nav 變成左右排列 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* 置中版心：小螢幕留 16px，大螢幕自動左右留白 */
+  padding-inline: max(16px, calc((100vw - 1200px) / 2));
+  box-sizing: border-box;
+
+  overflow: hidden; /* 防止 logo 溢出 */
+}
+
+body{
+  margin: 0;
+  padding-top: 80px;
+}
+header h1{ margin: 0; }
