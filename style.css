@@ -1482,3 +1482,37 @@ body{
     gap: 16px;
   }
 }
+/* =========================
+   LOGO 放大 + 靠左 (CSS only)
+   ========================= */
+
+/* header 左右排列 */
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 12px !important;  /* 控制靠左距離 */
+  padding-right: 24px;
+}
+
+/* 放大 logo */
+header h1{
+  width: 240px;     /* ← 放大 */
+  height: 64px;     /* 建議 56~72 之間 */
+  margin: 0;
+
+  background-image: url(images/00_logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+
+  text-indent: -9999px;
+}
+
+/* 手機自動縮小 */
+@media (max-width:768px){
+  header h1{
+    width: 160px;
+    height: 48px;
+  }
+}
