@@ -1546,3 +1546,65 @@ header h1{
 .nav{
   gap: 32px !important;
 }
+/* ===== Header 最終版：LOGO 左靠、放大、垂直置中、選單右靠 ===== */
+header{
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 10 !important;
+
+  height: 80px !important;
+  background: #1C2454 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+
+  /* 左右留白（覺得太多/太少改這裡） */
+  padding: 0 32px !important;
+  box-sizing: border-box !important;
+
+  overflow: hidden !important; /* 防止 logo 溢出 */
+}
+
+/* 你的 Logo 是用 header h1 當背景圖 */
+header h1{
+  margin: 0 !important;
+
+  /* ✅ Logo 大小（想再大就改這兩個） */
+  width: 220px !important;
+  height: 64px !important;
+
+  /* ✅ 背景圖設定：靠左、等比縮放 */
+  background-image: url("images/00_logo.svg") !important;
+  background-repeat: no-repeat !important;
+  background-position: left center !important;
+  background-size: contain !important;
+
+  /* 隱藏文字 */
+  text-indent: -9999px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+
+  flex: 0 0 auto !important;
+}
+
+/* 選單右側 */
+header nav{ margin-left: auto !important; }
+
+header .nav{
+  display: flex !important;
+  gap: 32px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  align-items: center !important;
+}
+
+header .nav a{
+  color: #fff !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  padding: 8px 4px !important;
+}
