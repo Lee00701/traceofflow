@@ -1404,3 +1404,81 @@ header h1{
 header{
   padding-left: 16px !important;  /* 原本可能太大 */
 }
+/* =========================
+   CLEAN HEADER SYSTEM
+   ========================= */
+
+:root{
+  --header-h: 80px;
+}
+
+/* 固定 header 滿版 */
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-h);
+  background: #1C2454;
+  z-index: 1000;
+}
+
+/* 內容版心 */
+.header-inner{
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.brand{
+  width: 220px;                 /* ← 桌機放大 */
+  height: 64px;
+  background-image: url(images/00_logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  text-indent: -9999px;
+  margin: 0;
+}
+
+/* 導覽列 */
+.nav{
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a{
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* 給內容空間避免被 header 蓋住 */
+body{
+  padding-top: var(--header-h);
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px){
+
+  .brand{
+    width: 160px;       /* 手機縮小 */
+    height: 48px;
+  }
+
+  .nav{
+    gap: 16px;
+  }
+}
