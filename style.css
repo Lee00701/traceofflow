@@ -1630,3 +1630,18 @@ header .nav a{
   }
 
 }
+/* =========================
+   桌機 Logo 再放大
+   不影響手機
+   ========================= */
+@media (min-width: 769px){
+
+  header h1{
+    width: 260px !important;   /* 原本220 → 放大 */
+    height: 72px !important;   /* 比例拉大但不超過 header */
+    
+    background-size: contain !important;
+    background-position: left center !important;
+  }
+
+}
